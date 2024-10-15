@@ -26,14 +26,14 @@ type LetStatement struct {
 	Value Expression
 }
 
-type Identifier struct {
-	Token token.Token // the token.IDENT token
-	Value string
-}
-
 type ReturnStatement struct {
 	Token       token.Token // the 'return' token
 	ReturnValue Expression
+}
+
+type Identifier struct {
+	Token token.Token // the token.IDENT token
+	Value string
 }
 
 func (ls *LetStatement) statementNode()       {}
